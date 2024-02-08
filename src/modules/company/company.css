@@ -1,0 +1,46 @@
+ .container {
+    max-width: 500px;
+    margin:  50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px hwb(330 6% 8% / 0.102);
+}
+
+h1 {
+    color: rgb(93, 0, 255);
+    text-align: center;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}  
+input,textarea,button {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Styles pour les boutons */
+button {
+    padding: 10px 10px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Styles pour le bouton "Envoyer" */
+button[type="submit"] {
+    background-color: #4CAF50; /* Couleur de fond */
+}
+
+/* Styles pour le bouton "Supprimer" */
+button[type="reset"] {
+    background-color: #f44336; /* Couleur de fond */
+}
+button:hover {
+    background-color: #a4a8a4; /* Couleur de fond au survol */
+}

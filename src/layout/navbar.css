@@ -1,0 +1,201 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');/* la police Roboto depuis google Fonts */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;/* Utilisation de la police Roboto pour le corps du document */
+}
+
+/* Styles pour sidebar */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Masquer la barre laterale en position initiale */
+    width: 250px;
+    height: 100%;
+    background: var(  --primary-color);
+    transition: all .5s ease; /* Ajouter une transition fluide */
+}
+
+/* Styles pour l'en-tête de sidebar*/
+.sidebar header {
+    font-size: 22px;/*taille de la police*/
+    color: white;/*hauteur de ligne*/
+    line-height: 70px;
+    text-align: center;
+    background: var(  --secondary-color);
+    user-select: none;/*tnahi selection mta text*/
+}
+
+/* Styles pour les liens de side */
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;/*espace vertical entre les lignes de texte */
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    border-bottom: 1px solid black;/*bordure en bas de l'élément*/
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);/*bordure en haut de l'élément*/
+    transition: .4s;/*transition de 0.4 seconde aux changements*/
+}
+
+/*  survol des liens dans la side */
+ul li:hover a {
+    padding-left: 50px;
+}
+
+/*  les icones dans les liens de la side(effet visuel) */
+.sidebar ul a i {
+    margin-right: 16px;
+}
+
+/* Masquer la case à cocher pour le menu  */
+#check {
+    display: none;
+}
+
+/* bouton menu w annulation */
+label #btn, label #cancel {
+    position: absolute;
+    background: var(  --primary-color);
+    border-radius: 3px;/*yaml coin*/
+    cursor: pointer;/*el curseur yekho fourma mta yed*/
+}
+
+/*  el bouton mta el menu  */
+label #btn {
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+/* el bouton d'annulation  */
+label #cancel {
+    z-index: 1111;/*contrôler l'empilement des éléments en fonction de leur profondeur sur l'axe Z*/
+    left: -195px;/* déplace l'élément de 195 pixels vers la gauche par rapport à sa position normale.*/
+    top: 17px;
+    font-size: 30px;
+    color:var( --secondary-color);
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+/* Afficher la barre latérale lors de la case à cocher activée */
+#check:checked ~ .sidebar {
+    left: 0;
+}
+/* Animation du bouton de menu  */
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;/*el bouton mta el menu ywali invisible*/
+}
+
+/* Animation du bouton d'annulation  */
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+/* Déplacer le contenu principal lorsque la barre latérale est ouverte */
+#check:checked ~ section {
+    margin-left: 250px;
+}
+/* Reinitialisation supplementaire des styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background: #eef4f7;
+}
+
+/* la barre de navigation */
+.navbar {
+    background: var(  --primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/*  les liens de navigation */
+.nav-links {
+    display: flex;/*tnadhem les element mta el barre de navig*/
+    justify-content: space-between;/*yaml espace egale bin les elements*/
+    align-items: center;
+}
+
+/* les elements de la liste de liens */
+.nav-links li {
+    margin-left: 20px;/*espace*/
+}
+
+/*  les liens de la liste de liens */
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/*  la zone de recherche  */
+.nav-links .search {
+    align-items: center;
+    margin-left: 20px;
+}
+/*  l'entrée de recherche  */
+.nav-links .search input {
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;/*par defaut blanc*/
+    outline: none;/*tnahi el cadre k tcliqui al zone de recherche*/
+    color: #fff;
+    padding: 6px;
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+/* doura mta el recherche  */
+.nav-links .search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Styles pour l'icône du bouton de recherche */
+.nav-links .search button i {
+    color: #fff;
+}
+
+/*  la selection de langue */
+.nav-links .language select {
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 6px;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--primary-color);
+}
+
+/* date */
+.nav-links .date {
+    margin-left: 20px;
+    color: #0c0c0c;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+
